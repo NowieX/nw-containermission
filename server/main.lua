@@ -32,7 +32,7 @@ AddEventHandler('nw-containermission:server:payoutClient', function(coords)
     local playerCoords = xPlayer.getCoords(true)
 
     if not coords then
-        xPlayer.kick("Caught by nw scripts 📸")
+        xPlayer.kick("Caught by nw 📸")
         SendDiscordMessage(Config.Webhooks.hacker.message, Config.Webhooks.hacker.webhookUrl)
         return
     end
@@ -40,7 +40,7 @@ AddEventHandler('nw-containermission:server:payoutClient', function(coords)
     local distance = #(playerCoords - coords)
 
     if distance > (Config.TargetDistances.trolleyTargetDistance + 2.0) then
-        xPlayer.kick("Caught by nw scripts 📸")
+        xPlayer.kick("Caught by nw 📸")
         sendDiscordMessage(Config.Webhooks.hacker.message, Config.Webhooks.hacker.webhookUrl)
         return
     end
